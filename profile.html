@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Khadija Dubois — MessagingApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="phone-frame">
+
+    <!-- Header -->
+    <header class="profile-header">
+      <button class="icon-btn" id="back-btn" aria-label="Back to chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="icon-btn" id="profile-menu-btn" aria-label="More options">
+        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>
+      </button>
+    </header>
+
+    <!-- Profile hero -->
+    <section class="profile-hero">
+      <div class="profile-hero__avatar-wrap">
+        <img class="profile-hero__avatar" id="profile-avatar" src="https://i.pravatar.cc/300?img=47" alt="Khadija Dubois" />
+        <span class="profile-hero__status-dot"></span>
+      </div>
+      <h1 class="profile-hero__name" id="profile-name">Khadija Dubois</h1>
+      <p class="profile-hero__phone" id="profile-phone">+12-6541-1234</p>
+    </section>
+
+    <!-- Scrollable content -->
+    <div class="profile-content">
+
+      <!-- Stats -->
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-card__value" id="stat-messages">12,145</div>
+          <div class="stat-card__label">Message</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value" id="stat-groups">94</div>
+          <div class="stat-card__label">Group</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value" id="stat-spaces">48</div>
+          <div class="stat-card__label">Spaces</div>
+        </div>
+      </div>
+
+      <!-- Media & photos -->
+      <section>
+        <div class="section-label">
+          <span>Media and photos</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+        <div class="media-grid" id="media-grid">
+          <!-- populated by profile.js -->
+        </div>
+      </section>
+
+      <!-- Settings options -->
+      <ul class="option-list">
+        <li>
+          <button class="option-item" data-option="notification">
+            <svg class="option-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="option-item__label">Notification</span>
+            <svg class="option-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="option-item" data-option="media-visibility">
+            <svg class="option-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span class="option-item__label">Media visibility</span>
+            <svg class="option-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="option-item" data-option="bookmarked">
+            <svg class="option-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            <span class="option-item__label">Bookmarked</span>
+            <svg class="option-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </li>
+        <li>
+          <div class="option-item" data-option="lock-chat">
+            <svg class="option-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span class="option-item__label">Lock Chat</span>
+            <button class="toggle" id="lock-chat-toggle" role="switch" aria-checked="false" aria-label="Toggle lock chat">
+              <span class="toggle__knob"></span>
+            </button>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Additional settings section (as seen continuing below the fold) -->
+      <ul class="option-list">
+        <li>
+          <button class="option-item" data-option="notification-2">
+            <svg class="option-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="option-item__label">Notification</span>
+            <svg class="option-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="option-item" data-option="media-visibility-2">
+            <svg class="option-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span class="option-item__label">Media visibility</span>
+            <svg class="option-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

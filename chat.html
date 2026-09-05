@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Visit Denpasar — MessagingApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="phone-frame">
+
+    <!-- Chat header -->
+    <header class="chat-header">
+      <button class="icon-btn" id="back-btn" aria-label="Back to chats">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <button class="chat-header__profile" id="profile-header" aria-label="Open contact profile">
+        <img class="chat-header__avatar" id="contact-avatar" src="https://i.pravatar.cc/150?img=68" alt="Visit Denpasar" />
+        <div class="chat-header__info">
+          <div class="chat-header__name" id="contact-name">Visit Denpasar</div>
+          <div class="chat-header__status" id="contact-status">Akbar, Fawzy, Khai, Kira, Musa, Smi...</div>
+        </div>
+      </button>
+
+      <div class="chat-header__actions">
+        <button class="icon-btn" aria-label="Start video call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Start voice call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </button>
+        <button class="icon-btn" id="chat-menu-btn" aria-label="More options">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Messages -->
+    <ul class="message-list" id="message-list">
+      <!-- populated by chat.js -->
+    </ul>
+
+    <!-- Composer -->
+    <form class="chat-composer" id="composer">
+      <div class="chat-composer__input-wrap">
+        <input
+          class="chat-composer__input"
+          id="message-input"
+          type="text"
+          placeholder="Type here"
+          autocomplete="off"
+        />
+        <button type="button" class="chat-composer__camera" aria-label="Attach photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </button>
+      </div>
+      <button type="submit" class="chat-composer__send" id="send-button" aria-label="Send message">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </form>
+  </main>
+
+  <script src="js/chat.js"></script>
+</body>
+</html>
